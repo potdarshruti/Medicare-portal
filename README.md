@@ -18,6 +18,17 @@ Frontend: project.html — main UI (Bootstrap + JS).
 Backend: server.py — API server (runs on localhost:5000).
 DB schema: create_database.sql — initial DB setup.
 
+Prerequisites & Installation
+Requirements:
+- Python 3.7+
+- SQLite3
+- Modern web browser (Chrome, Firefox, Edge)
+Setup:
+1. Clone the repository and navigate to the project directory.
+2. Install Python dependencies: `pip install flask`
+3. Start the backend server: `python server.py`
+4. Open `project.html` in your browser at `http://localhost:5000`
+
 Tech stack:
 Frontend: HTML, Bootstrap, vanilla JavaScript (fetch API).
 Backend: Python 

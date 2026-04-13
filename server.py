@@ -2,13 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pyodbc
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# SQL Server connection string
-SERVER = 'Shruti\\SQLEXPRESS'
-DATABASE = 'MedicalInventory'
+# SQL Server connection string - using environment variables for privacy
+SERVER = os.environ.get('SQL_SERVER', 'localhost\\SQLEXPRESS')
+DATABASE = os.environ.get('SQL_DATABASE', 'MedicalInventory')
 DRIVER = 'SQL Server'
 CONNECTION_STRING = f'DRIVER={{{DRIVER}}};SERVER={SERVER};DATABASE={DATABASE};Trusted_Connection=yes;'
 
